@@ -10,7 +10,7 @@ image_path = './gemini_single_images/bgm.jpg'
 image2 = Image.open(image_path)
 
 # client = genai.Client("api-key")
-client = genai.Client(api_key="AIzaSyBB33BVATAEMo5l7NgjDAs1mdvRkQ6FHZs")
+client = genai.Client("api-key")
 
 text_input = "Create an image using these two images, put the painting in image1 on the wall of image2. Make small variations to make the colors look better and brighter, do not alter the furniture"
 response = client.models.generate_content(
