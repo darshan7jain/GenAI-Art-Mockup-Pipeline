@@ -5,8 +5,11 @@ This project uses OpenAI's image editing API (`gpt-image-1`) to generate realist
 ## How It Works
 The final script takes a set of n artworks as input and uses OpenAI's `gpt-image-1` model to generate suitable room backgrounds and place the artwork appropriately. 
 
+room_plus_final_mockup.py
+This file contains the final pipeline of generating room images from a random input of artworks, followed by making the final mockups by imposing the artworks on the room images(random selection of both rooms and artworks).
+
 artroom_generator.py
-The main orchestration script that ties together the mockup generation process. It may handle user input, select between AI models (Gemini or OpenAI), and manage the overall image generation flow.
+Works in a similar way as room_plus_final_mockup.py does but is restricted to only room image generation and not the final mockup(imposing artwork in room image).
 
 prototype_openai.py
 Uses OpenAI's gpt-image-1 model to generate a complete room mockup from a given artwork image. The script provides only the artwork as input, and the model creates a realistic interior background where the artwork is naturally placed, resulting in a photorealistic and visually appealing mockup.
